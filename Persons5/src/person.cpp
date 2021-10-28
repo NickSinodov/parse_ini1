@@ -431,7 +431,7 @@ void person::person_is_death()
     {
         if(m_person.m_year_of_death.toInt() == possible_year_of_death + 1)
         {
-            if(month_of_death > m_person.m_month_of_birth || month_of_death > cur_month)
+            if(month_of_death > m_person.m_month_of_birth || month_of_death.toInt() > cur_month)
             {
                 msgBox.setText(tr("Enter the month from 1 to %1").arg(m_person.m_month_of_birth));
                 msgBox.exec();
